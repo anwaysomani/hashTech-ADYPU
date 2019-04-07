@@ -1,0 +1,669 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.shortcuts import render
+from .forms import *
+from .models import *
+
+# Forms
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from django.views import generic
+from bootstrap_modal_forms.mixins import PassRequestMixin
+
+# Defining events
+# ---------------
+
+# Building Design Analysis Workshop
+class bdaw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = TallBuildingDesignAnalysisWorkshopForm
+	template_name = 'sub_events/buildingDesignAnalysisWorkshop.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('buildingDesignAnalysisWorkshop')
+
+
+# Cs:Go
+class cg_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = CsGoForm
+	template_name = 'sub_events/csGo.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('csGo')
+
+# Drone Building Workshop
+class dbw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = DroneBuildingWorkshopForm
+	template_name = 'sub_events/droneBuildingWorkshop.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('droneBuildingWorkshop')
+
+# Ethical Hacking Workshop
+class ehw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = EthicalHackingWorkshopForm
+	template_name = 'sub_events/ethicalHackingWorkshop.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('ethicalHackingWorkshop')
+
+class flfc_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = FastestLineFollowerChallengeForm
+	template_name = 'sub_events/fastestLineFollowerChallenge.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('fastestLineFollowerChallenge')
+
+# Fifa 19
+class f_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = Fifa19Form
+	template_name = 'sub_events/fifa19.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('fifa19')
+
+# Hackathon
+#class h_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+#	form_class = HackathonForm
+#	template_name = 'sub_events/hackathon.html'
+#	success_message = 'Succesfully Registered'
+#	success_url = reverse_lazy('hackathon')
+
+# Into The Next Dimension
+class itnd_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = IntoTheNextDimensionForm
+	template_name = 'sub_events/intoTheNextDimension.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('intoTheNextDimension')
+
+# Machine Learning Workshop
+class mlw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = MachineLearningWorkshopForm
+	template_name = 'sub_events/machineLearningWorkshop.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('machineLearningWorkshop')
+
+# NFS Most Wanted
+class nmw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = NfsMostWantedForm
+	template_name = 'sub_events/nfsMostWanted.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('nfsMostWanted')
+
+# Paintball
+class p_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = PaintballForm
+	template_name = 'sub_events/paintball.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('paintball')
+
+# PCB Design Workshop
+class pdw_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = PcbDesignWorkshopForm
+	template_name = 'sub_events/pcbDesigningWorkshop.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('pcbDesignWorkshop')
+
+# Pitch-It-Up
+class piu_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = PitchItUpForm
+	template_name = 'sub_events/pitchItUp.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('pitchItUp')
+
+# Pradyo Geeky
+class pg_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = PradyoGeekyForm
+	template_name = 'sub_events/pradyoGeeky.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('pradyoGeeky')
+
+# PUBG Mobile
+class pm_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = PubgMobileForm
+	template_name = 'sub_events/pubgMobile.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('pubgMobile')
+
+# Robo Race
+class rr_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = RoboRaceForm
+	template_name = 'sub_events/roboRace.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('roboRace')
+
+# Robo Soccer
+class rs_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = RoboSoccerForm
+	template_name = 'sub_events/roboSoccer.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('roboSoccerQuest')
+
+# The Excelsior's Quest
+class teq_event(PassRequestMixin, SuccessMessageMixin, generic.CreateView):
+	form_class = TheExcelsiorsQuestForm
+	template_name = 'sub_events/theExcelsiorsQuest.html'
+	success_message = 'Succesfully Registered'
+	success_url = reverse_lazy('theExcelsiorsQuest')
+
+
+def event_page(request):
+	coordinators = Coordinators.objects.filter(eventname='Hackathon')
+	volunteers = Volunteers.objects.filter(eventname='Hackathon')
+	event = Event.objects.filter(event_name='Hackthon')
+
+	form = individual_ParticipantRegistration()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Hackathon',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = individual_ParticipantRegistration(request.POST or None)
+		if form.is_valid():
+			form.save()	
+			return render('sub_events/event_page.html')
+	else:
+		form = individual_ParticipantRegistration()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def hackathon(request):
+	coordinators = Coordinators.objects.filter(eventname='Hackathon')
+	volunteers = Volunteers.objects.filter(eventname='Hackathon')
+	event = Event.objects.filter(event_name='Hackthon')
+
+	form = HackathonForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Hackathon',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = HackathonForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = HackathonForm()
+
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def nfsmostwanted(request):
+	coordinators = Coordinators.objects.filter(eventname='NFS Most Wanted')
+	volunteers = Volunteers.objects.filter(eventname='NFS Most Wanted')
+	event = Event.objects.filter(event_name='NFS Most Wanted')
+	
+	form = NfsMostWantedForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'NFS Most Wanted',
+		'start_date': '26',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+	
+	if request.method=="POST":
+		form = NfsMostWantedForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = NfsMostWantedForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+
+def fifa19(request):
+	coordinators = Coordinators.objects.filter(eventname='FIFA 19')
+	volunteers = Volunteers.objects.filter(eventname='FIFA 19')
+	event = Event.objects.filter(event_name='FIFA 19')
+
+	form = Fifa19Form()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'FIFA 19',
+		'start_date': '26',
+		'end_date': '29',
+		'event': Event,
+	}
+
+	if request.method=="POST":
+		form = Fifa19fForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = Fifa19Form()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def dronebuildingworkshop(request):
+	coordinators = Coordinators.objects.filter(eventname='Drone Building Workshop')
+	volunteers = Volunteers.objects.filter(eventname='Drone Building Workshop')
+	event = Event.objects.filter(event_name='Drone Building Workshop')
+	
+	form = DroneBuildingWorkshopForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Drone Building Workshop',
+		'start_date': '26',
+		'end_date': '27',
+		'event_description': event.description,
+	}
+    
+	if request.method=="POST":
+		form = DroneBuildingWorkshopForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = DroneBuildingWorkshopForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def ethicalhackingworkshop(request):
+	coordinators = Coordinators.objects.filter(eventname='Ethical Hacking Workshop')
+	volunteers = Volunteers.objects.filter(eventname='Ethical Hacking Workshop')
+	event = Event.objects.filter(event_name='Ethical Hacking Workshop')
+
+	form = EthicalHackingWorkshopForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Ethical Hacking Workshop',
+		'start_date': '30',
+		'end_date': '31',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = EthicalHackingWorkshopForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = EthicalHackingWorkshopForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def tallbuildingdesignanalysisworkshop(request):
+	coordinators = Coordinators.objects.filter(eventname='Tall Building Design Analysis Workshop')
+	volunteers = Volunteers.objects.filter(eventname='Tall Building Design Analysis Workshop')
+	event = Event.objects.filter(event_name='Tall Building Design Analysis Workshop')
+
+	form = TallBuildingDesignAnalysisWorkshopForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Tall Building Design Analysis Workshop',
+		'start_date': '26',
+		'end_date': '27',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = TallBuildingDesignAnalysisWorkshopForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = TallBuildingDesignAnalysisWorkshopForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def intothenextdimension(request):
+	coordinators = Coordinators.objects.filter(eventname='Into The Next Dimension')
+	volunteers = Volunteers.objects.filter(eventname='Into The Next Dimension')
+	event = Event.objects.filter(event_name='Into The Next Dimension')
+	
+	form = IntoTheNextDimensionForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Into The Next Dimension',
+		'start_date': '26',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = IntoTheNextDimensionForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = IntoTheNextDimensionForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def pcbdesignworkshop(request):
+	coordinators = Coordinators.objects.filter(eventname='PCB Design Workshop')
+	volunteers = Volunteers.objects.filter(eventname='PCB Design Workshop')
+	event = Event.objects.filter(event_name='PCB Design Workshop')
+
+	form = PcbDesignWorkshopForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'PCB Design Workshop',
+		'start_date': '26',
+		'end_date': '27',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = PcbDesignWorkshopForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = PcbDesignWorkshopForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def machinelearningworkshop(request):
+	coordinators = Coordinators.objects.filter(eventname='Machine Learning Workshop')
+	volunteers = Volunteers.objects.filter(eventname='Machine Learning Workshop')
+	event = Event.objects.filter(event_name='Machine Learning Workshop')
+	
+	form = MachineLearningWorkshopForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Machine Learning Workshop',
+		'start_date': '26',
+		'end_date': '27',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = MachineLearningWorkshopForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = MachineLearningWorkshopForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def theexcelsiorsquest(request):
+	coordinators = Coordinators.objects.filter(eventname='The Excelsiors Quest')
+	volunteers = Volunteers.objects.filter(eventname='The Excelsiors Quest')
+	event = Event.objects.filter(event_name='The Excelsiors Quest')
+	
+	form = TheExcelsiorsQuestForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,    
+		'event_name': 'The Excelsiors Quest',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+	
+	if request.method=="POST":
+		form = TheExcelsiorsQuestForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = TheExcelsiorsQuestForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def pitchitup(request):
+	coordinators = Coordinators.objects.filter(eventname='Pitch-It-Up')
+	volunteers = Volunteers.objects.filter(eventname='Pitch-It-Up')
+	event = Event.objects.filter(event_name='Pitch-It-Up')
+	
+	form = PitchItUpForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Pitch-It-Up',
+		'start_date': '29',
+		'event_description': event.description,
+	}
+	
+	if request.method=="POST":
+		form = PitchItUpForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = PitchItUpForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def gocart(request):
+	coordinators = Coordinators.objects.filter(eventname='Go Cart')
+	volunteers = Volunteers.objects.filter(eventname='Go Cart')
+	event = Event.objects.filter(event_name='Go Cart')
+	
+	form = GoCartForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Go Cart',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+	
+	if request.method=="POST":
+		form = individual_ParticipantRegistration(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = individual_ParticipantRegistration()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def robosoccer(reuqest):
+	coordinators = Coordinators.objects.filter(eventname='Robo Soccer')
+	volunteers = Volunteers.objects.filter(eventname='Robo Soccer')
+	event = Event.objects.filter(event_name='Robo Soccer')
+	
+	form = RoboSoccerForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Robo-Soccer',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = RoboSoccerForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = RoboSoccerForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def roborace(request):
+	coordinators = Coordinators.objects.filter(eventname='Robo Race')
+	volunteers = Volunteers.objects.filter(eventname='Robo Race')
+	event = Event.objects.filter(event_name='Robo Race')
+	
+	form = RoboRaceForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Robo Race',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = RoboRaceForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = RoboRaceForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def fastestlinefollowerchallenge(request):
+	coordinators = Coordinators.objects.filter(eventname='Fastest Line Follower Challenge')
+	volunteers = Volunteers.objects.filter(eventname='Fastest Line Follower Challenge')
+	event = Event.objects.filter(event_name='Fastest Line Follower Challenge')
+	
+	form = FastestLineFollowerChallengeForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Fastest Line Follower Challenge',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = FastestLineFollowerChallengeForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = FastestLineFollowerChallengeForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def pradyogeeky(request):
+	coordinators = Coordinators.objects.filter(eventname='Pradyo-Geeky')
+	volunteers = Volunteers.objects.filter(eventname='Pradyo-Geeky')
+	event = Event.objects.filter(event_name='Pradyo-Geeky')
+	
+	form = PradyoGeekyForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Pradyo-Geeky',
+		'start_date': '28',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = PradyoGeekyForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = PradyoGeekyForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def pubgmobile(request):
+	coordinators = Coordinators.objects.filter(eventname='PUBG Mobile')
+	volunteers = Volunteers.objects.filter(eventname='PUBG Mobile')
+	event = Event.objects.filter(event_name='PUBG Mobile')
+	
+	form = PubgMobileForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'PUBG Mobile',
+		'start_date': '26',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = PubgMobileForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = PubgMobileForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def csgo(request):
+	coordinators = Coordinators.objects.filter(eventname='CS Go')
+	volunteers = Volunteers.objects.filter(eventname='CS Go')
+	event = Event.objects.filter(event_name='CS Go')
+
+	form = CsGoForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'CS Go',
+		'start_date': '26',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = CsGoForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = CsGoForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+def paintball(request):
+	coordinators = Coordinators.objects.filter(eventname='Paintball')
+	volunteers = Volunteers.objects.filter(eventname='Paintball')
+	event = Event.objects.filter(event_name='Paintball')
+
+	form = PaintballForm()
+	context = {
+		'form': form,
+		'coordinator': coordinators,
+		'voluteer': volunteers,
+		'event_name': 'Paintball',
+		'start_date': '28',
+		'end_date': '29',
+		'event_description': event.description,
+	}
+
+	if request.method=="POST":
+		form = PaintballForm(request.POST or None)
+		if form.is_valid():
+			form.save() 
+			return render('sub_events/event_page.html')
+	else:
+		form = PaintballForm()
+
+	return render(request, 'sub_events/event_page.html', context)
+
+
+
+
+
+
+
