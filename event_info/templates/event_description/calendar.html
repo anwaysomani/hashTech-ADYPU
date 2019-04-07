@@ -1,0 +1,186 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========== Meta Tags ========== -->
+<meta charset="UTF-8">
+<meta name="description" content="#Tech - Schedule">
+<meta name="keywords" content="#Tech - Schedule">
+<meta name="author" content="#Tech">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- ========== Title ========== -->
+<title>#TECH - Calendar</title>
+<!-- ========== Favicon Ico ========== -->
+<link rel="icon" href="{% static 'apps/img/bg/logo.ico' %}">
+<!-- ========== STYLESHEETS ========== -->
+<!-- Bootstrap CSS -->
+<link href="{% static 'apps/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Fonts Icon CSS -->
+<link href="{% static 'apps/css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/et-line.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/ionicons.min.css' %}" rel="stylesheet">
+<!-- Carousel CSS -->
+<link href="{% static 'apps/css/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/owl.theme.default.min.css' %}" rel="stylesheet">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="{% static 'apps/css/animate.min.css' %}">
+<!-- Custom styles for this template -->
+<link href="{% static 'apps/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/calender.css' %}" rel="stylesheet">
+</head>
+<body style="background-color: black;" >
+<div class="loader">
+<div class="loader-outter"></div>
+<div class="loader-inner"></div>
+</div>
+
+<!--header start here -->
+<header class="header navbar fixed-top navbar-expand-md">
+<div class="container">
+<a class="navbar-brand logo" href="#">
+<img src="{% static 'apps/img/logo-dark.png' %}" alt="logo"/>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="lnr lnr-text-align-right"></span>
+</button>
+<div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+<ul class=" nav navbar-nav menu">
+<li class="nav-item">
+<a class="nav-link" href="{% url 'homepage' %}">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active-now" href="{% url 'calendar_page' %}">Schedule</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="{% url 'Sponsors' %}">Sponsors</a>
+</li>
+<li class="nav-item">
+<a class="nav-link " href="{% url 'student_coordinator' %}">Team</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{% url 'Contact-Us' %}">Contact</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<!--header end here-->
+
+<!--event calender-->
+<section class="pb100">
+<div class="container">
+<div class="table-responsive" id="table">
+<table class="event_calender table ">
+
+<thead class="event_title">
+<tr>
+<th id="tblhead">
+
+<span><h4>Almanac</h4></span>
+</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+	{% for eve in event %}
+	<tr>
+		<td id="tdimg">  
+			<img id="tblimg"src="{% static 'apps/img/events/' %}{{ eve.image }}.png" alt="event">
+		</td>
+		<td class="event_date">
+			{{ eve.date }}
+			<span>March</span>
+		</td>
+		<td>
+			<div class="event_place">
+				<h5><font color = "#4472C4" >{{ eve.event }}</font></h5>
+				<h6><font color = "#4472C4" >{{ eve.time }}</font></h6>
+				<p><font color = "#4472C4" >{{ eve.category }}</font></p>
+			</div>
+		</td>
+		<td>
+			<a href="{{ eve.url }}" class="btn btn-primary btn-rounded">Read More</a>
+		</td>
+		<td class="buy_link">
+			<a href="{% url 'student_coordinator' %}">Coordinator</a>
+		</td>
+	</tr>
+	{% endfor %}
+</tbody>
+</table>
+<!--<h5><font color = "#038BFF" >Note : Into The NEXT DIMENSION, CS:GO and NFS:Most Wanted will be there throughout complete event.(12-15 March)</font></h5>-->
+
+</div>
+</div>
+</section>
+<!--event calender end -->
+
+<!--brands section -->
+<!--
+<section class="bg-gray pt100 pb100">
+<div class="container">
+<div class="section_title mb50">
+<h3 class="title">
+our partners
+</h3>
+</div>
+<div class="brand_carousel owl-carousel">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/brands/b1.png' %}" alt="brand">
+</div>
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/brands/b2.png' %}" alt="brand">
+</div>
+
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/brands/b3.png' %}" alt="brand">
+</div>
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/brands/b4.png' %}" alt="brand">
+</div>
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/brands/b5.png' %}" alt="brand">
+</div>
+</div>
+</div>
+</section> -->
+<!--brands section end-->
+
+<!--footer start -->
+<div class="copyright_footer">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 col-12">
+<p>
+#Tech 2019, Ajeenkya DY Patil University, Pune
+</p>
+</div>
+</div>
+</div>
+</div>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="{% static 'apps/js/jquery.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'apps/js/popper.js' %}"></script>
+<script src="{% static 'apps/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'apps/js/waypoints.min.js' %}"></script>
+<!--slick carousel -->
+<script src="{% static 'apps/js/owl.carousel.min.js' %}"></script>
+<!--parallax -->
+<script src="{% static 'apps/js/parallax.min.js' %}"></script>
+<!--Counter up -->
+<script src="{% static 'apps/js/jquery.counterup.min.js' %}"></script>
+<!--Counter down -->
+<script src="{% static 'apps/js/jquery.countdown.min.js' %}"></script>
+<!-- WOW JS -->
+<script src="{% static 'apps/js/wow.min.js' %}"></script>
+<!-- Custom js -->
+<script src="{% static 'apps/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+{% extends 'sub_events/event_page.html' %}
+
+{% block content %}
+
+<style>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #000;
+  color:white;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: grey;
+  font-family: 'Sniglet', cursive;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  transition: 0.3s;
+  font-size: 17px;
+  word-wrap: normal;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  /*border: 1px solid #ccc;*/
+  border-top: none;
+}
+</style>
+
+<div class="container"
+<div class="event_box">
+<div class="event_info">
+<div class="event_title">battlegrounds</div>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'BeatMyCode')">Beat-My-Code</button>
+  <button class="tablinks" onclick="openCity(event, 'FullStackBattle')">Full Stack Battle</button>
+  <button class="tablinks" onclick="openCity(event, 'SmartGeekyNova')">Smart GeekyNova</button>
+</div>
+
+<div id="BeatMyCode" class="tabcontent">
+	<div class="event_info">
+		<div class="event_title">Beat-My-Code</div>
+			Beat-My-Code is a coder's playground to the amazingly challenging questions and competing environment, where you race yourself with the similar-grade experts to find the solution to common challenging questions. It is a mixture of 4 different queestions, varying the field of data structures, greedy algorithms, dynamic programming, and much more...<br>
+			Find yourself in an exciting adventure on 28th & 29th March....<br>
+		<br><br>	
+		<div class="event_title">About the Challenge</div>
+		Beat-My-Code is a two hour challenge, in which all the participants will be provided with 4 different programming questions, which needs to be solved in any language they wish to from the list available at: <a href="">http://www.hashtech-adypu.com/Hackathon/Supported-PLs</a>.<br>
+		The question patterns are as follows...<br>
+		<li>Q1 - Easy Programming Question</li>
+		<li>Q2 - Easy Programming Question</li>
+		<li>Q3 - Medium Programming Question</li>
+		<li>Q4 - Hard Programming Question</li><br>
+		* Please <b>Note</b>: <br>- All questions are compulsary. 
+		<br>- No extra time will be given to attempt the questions. 
+		<br>- Particpants are expected to solve the questions in the given duration only.<br>
+		- The test environment will be closed automatically after the timer for the challenge has exhausted.
+		<br><br>
+		<div class="event_title">Judgement Criteria</div>
+		<li>You will be ranked on the basis of score you get.</li>
+		<li>There are no penalties for wrong submissions, so you can submit solutions as many times as you'd like.</li>
+		<li>However, only your best correct submission will be considered.</li>
+		<li>Ties are broken according to the times each participant reached that score.</li>
+		<br><br>
+		<div class="event_title">Batches</div>
+		<li>28 March -> 09:30 am - 11:30 am</li>
+		<li>28 March -> 12:00 pm - 02:00 pm</li>
+		<li>28 March -> 02:30 pm - 04:30 pm</li>
+		<li>29 March -> 09:30 am - 11:30 am</li>
+		<li>29 March -> 12:00 pm - 02:00 pm</li>
+		<li>29 March -> 02:30 pm - 04:30 pm</li>
+		<br><br>
+		<div class="event_title">Participation Fees</div>
+		Free registration...!<br>
+		Individual participation only.<br>
+		IMP: The questions for all challenges are going to be different.<br>
+	</div>
+</div>
+
+<div id="FullStackBattle" class="tabcontent">
+	<div class="event_info">
+	<div class="event_title">Full Stack Battle</div>
+	Are you an amazing programmer, but waiting for a playground to compete? Well, you are in the amazing location to challenge your fellow mates to compete against the coding challenge, and ofcourse, beat them till the top! Win much more amazing prizes and offers, and be the stud you were meant to be. Presenting to you, a Full Stack Battle competition at Ajeenkya DY Patil University, where you will be competing against many such aspirants as you, and your task is to show the world what an awesome application developer you are.
+	<br><br>
+	<div class="event_title">About the Competition</div>
+	Full-Stack Battle is a 32-hour open window competition, in which all participants will be given different questions, requiring them to build either a web application or mobile application within the stipulated time.
+	<br><br>
+	<div class="event_title">Judgement Criteria</div>
+	The paramters for judging users application are:<br>
+	<li>User Interface & User Experience(UI/UX)</li>
+	<li>Data Transmission of given data or users data and Database</li>
+	<li>Optimised working of the application</li>
+	<br><br>
+	<div class="event_title">Important Dates</div>
+	Last Date of registration: <b>27th March, 2019 - 05:30 pm</b><br>
+	Event Date				 : <b>28th March, 2019 - 09:00 am</b><br>
+	Event Ends 				 : <b>29th March, 2019 - 05:00 pm</b><br>
+	Results					 : <b>will be informed via mail</b>
+	<br><br>
+	<div class="event_title">Sample Question</div>
+	Sample Questions will be soon made available at <a href="" style="color: blue'">http://www.hashtech-adypu.com/Hackathon/Sample-Question</a>
+	<br><br>
+	<div class="event_title">Participation Fees</div>
+	Free registrations...<br>
+	Individual participation only.
+	</div>
+</div>
+
+<div id="SmartGeekyNova" class="tabcontent">
+	<div class="event_info">
+		<div class="event_title">Smart Geeky-Nova</div>
+		Having an innovation that can change the reality? Well, here's what you need. An exciting platform to present your idea to the others! <b>Smart GeekyNova</b> is a hackathon for all our participants to be able to design, develop and present their ideas to the world by the means of our Smart Hackathon, and enable their project to receive reviews, updates, new features, and even collaborators to make their own idea, the <b>Most Awesome</b> idea!
+		<br><br>
+		<div class=event_title">About Smart GeekyNova</div>
+			Smart GeekyNova is the perfect place for individuals who have a new concept to present to the world for making it a better place to live, This provides a way to discover, ideate and innovate the application, and make it available to the real-time environment. One can present his or her idea to the official executives, gather reviews and re-innovate the application, and present their ideas a leverage for implementation.
+		<br><br>
+		<div class="event_title">Judgement Criteria</div>
+		Any idea will be judged on the follwing parameters:<br>
+		<li>Usability of innovation</li>
+		<li>Scope of the product</li>
+		<li>Implement methodology in the real-time scenario</li>
+		<br><br>
+		<div class="event_title">Theme</div>
+		<b>Open Innovation</b><br><hr>
+		Under this category, individuals can present their ideas as open innovation, i.e valid to varied fields.
+		<br><br>
+		<div class="event_title">Participation Fees</div>
+		Participation can be individual or team.<br>
+		Free registrations...
+		<br><br>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+{% endblock content %}
+

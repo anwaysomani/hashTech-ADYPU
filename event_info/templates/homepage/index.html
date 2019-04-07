@@ -1,0 +1,466 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- ========== Meta Tags ========== -->
+	<meta charset="UTF-8">
+	<meta name="description" content="#Tech 2K19">
+	<meta name="keywords" content="#Tech 2K19">
+	<meta name="author" content="#Tech 2K19">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- ========== Title ========== -->
+	<title>#TECH</title>
+	<!-- ========== Favicon Ico ========== -->
+	
+	<!--<link rel="icon" href="fav.ico">-->
+	
+	<!-- ========== STYLESHEETS ========== -->
+	<!-- Bootstrap CSS -->
+	<link href="{% static 'apps/css/bootstrap.min.css' %}" rel="stylesheet">
+	<!-- Fonts Icon CSS -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="{% static 'apps/css/et-line.css' %}" rel="stylesheet">
+	<link href="{% static 'apps/css/ionicons.min.css' %}" rel="stylesheet">
+	<!-- Carousel CSS -->
+	<link href="{% static 'apps/css/owl.carousel.min.css' %}" rel="stylesheet">
+	<link href="{% static 'apps/css/owl.theme.default.min.css' %}" rel="stylesheet">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="{% static 'apps/css/animate.min.css' %}">
+
+	<link rel="stylesheet" href="{% static 'apps/css/font-awesome.min.css' %}">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Sniglet" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'apps/css/main.css' %}" rel="stylesheet">
+	<link rel="icon" href="{% static 'apps/img/logo.png' %}" type="image/x-icon"/>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113145627-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+  		gtag('config', 'UA-135076440-1');
+	</script>
+
+</head>
+<body  style="background-color: black;">
+	<div class="loader">
+		<div class="loader-outter"></div>
+		<div class="loader-inner"></div>
+	</div>
+
+	<!--header start here -->
+	<header class="header navbar fixed-top navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand logo" href="{% url 'homepage' %}">
+				<img src="{% static 'apps/img/logo-dark.png' %}" alt="logo"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="lnr lnr-text-align-right"></span>
+			</button>
+			<div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+				<ul class=" nav navbar-nav menu">
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'calendar_page' %}">Schedule</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'Sponsors' %}">Sponsors</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'student_coordinator' %}">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'Contact-Us' %}">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+<!--header end here-->
+
+<!--cover-->
+<div id="home" class="intro route bg-image home-cover" style="background-image: url({% static 'apps/img/bg/edi2.png' %})">
+
+<div class="intro-content display-table">
+<div class="table-cell">
+<div class="container cover_item">
+<a href="#even">
+<div class="arrow-container animated fadeInDown">
+  <div class="arrow-2">
+    <i class="fa fa-angle-down"></i>
+  </div>
+  <div class="arrow-1 animated hinge infinite zoomIn"></div>
+</div>
+</a> 				
+</div>
+</div>
+</div>
+</div>
+<!--cover-->
+
+<!--event info -->
+<section class="pt100 pb100" style="background-color: black">
+<div class="container">
+<div style="background-color: ; color: white;padding-left: 10px; width: 50;">
+	<a href="{% url 'djNight' %}" style="font: 25px Bold Arial Black, Helvetica, Serif; text-align: center">
+		Register for DJ Night here >>>
+	</a>
+</div>
+<div class="row justify-content-center">
+
+<a href="https://www.instagram.com/hashtech_2k19">
+<div class="col-6 col-md-4" >
+<div class="icon_box_two">
+<i class="fab fa-instagram"></i>
+<div class="content">
+<h5 class="box_title">
+INSTAGRAM
+</h5>
+<p>/hashtech_2k19</p>
+</div>
+</div>
+</div>
+</a>
+
+<a href="https://www.facebook.com/hashtech2k19">
+<div class="col-6 col-md-4">
+<div class="icon_box_two">
+<i class="fab fa-facebook"></i>
+<div class="content">
+<h5 class="box_title">
+FACEBOOK
+</h5>
+<p>
+/hashtech2k19
+</p>
+</div>
+</div>
+</div>
+</a>
+
+<a href="https://www.twitter.com/hashtech2k19">
+<div class="col-6 col-md-4">
+<div class="icon_box_two">
+<i class="fab fa-twitter-square"></i>
+<div class="content">
+<h5 class="box_title">
+TWITTER
+</h5>
+<p>
+/hashtech2k19
+</p>
+</div>
+</div>
+</div>
+</a>
+
+</div>
+</div>
+</section>
+<!--event info end -->
+
+
+<!--event countdown -->
+<section class="bg-img pt70 pb70" style="background-image: url('{% static 'apps/img/bg/Picture2.png' %}');">
+<div class="overlay_dark"></div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-12 col-md-10">
+<h4 class="mb30 text-center color-light">AWESOMENESS TO BEGIN IN...</h4>
+<div class="countdown"></div>
+</div>
+</div>
+<div id="even"></div>
+</div>
+</section>
+<!--event count down end-->
+
+<br>
+
+<!--event-->
+
+<div class="section_title mb30 mt30 ml20" >
+<h3 class="title">
+Competitions
+</h3>
+</div>
+<div class="brand_carousel owl-carousel">
+<a href="{% url 'roboSoccer' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/01soccer.png' %}" alt="brand">
+</div>
+</a>
+<a href="{% url 'fastestLineFollowerChallenge' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/02line.png' %}" alt="brand">
+</div>
+</a>
+<a href="{% url 'hackathon' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/04hackathon.png' %}" alt="brand">
+</div>
+</a>
+<a href="{% url 'roboRace' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/03roborace.png' %}" alt="brand">
+</div>
+</a>
+<a href="{% url 'pradyoGeeky' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/06project.png' %}" alt="brand">
+</div>
+</a>
+
+<a href="{% url 'pitchItUp' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/05business.png' %}" alt="brand">
+</div>
+</a>
+</div>
+<!--event-->
+
+<!--workshop-->
+<div class="section_title mb30 mt30 ml20">
+<h3 class="title">
+workshop
+</h3>
+</div>
+<div class="brand_carousel owl-carousel">
+<a href="{% url 'droneBuildingWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/10drone.png' %}" alt="drone">
+</div>
+</a>
+<a href="{% url 'goKartDesignWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/gokart.png' %}" alt="Go-Kart">
+</div>
+</a>
+<a href="{% url 'ethicalHackingWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/11ethhacking.png' %}" alt="hacking">
+</div>
+</a>
+<a href="{% url 'machineLearningWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/12ML.png' %}" alt="ml">
+</div>
+</a>
+<a href="{% url 'pcbDesignWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/bg/pcb.png' %}" alt="pcb">
+</div>
+</a>
+<a href="{% url 'eVehicleWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/evehicle.png' %}" alt="cs-go">
+</div>
+</a>
+<a href="{% url 'buildingDesignAnalysisWorkshop' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/bg/tall.png' %}" alt="building design">
+</div>
+</a>
+</div>
+<!--workshop end-->
+
+<!--games-->
+<div class="section_title mb30 mt30 ml20">
+<h3 class="title">
+gaming event
+</h3>
+</div>
+<div class="brand_carousel owl-carousel">
+<a href="{% url 'pubgMobile' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/13pubg.png' %}" alt="pubg">
+</div>
+</a>
+<a href="{% url 'fifa19' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/15fifa.png' %}" alt="fifa">
+</div>
+</a>
+<a href="{% url 'csGo' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/14csgo.png' %}" alt="cs-go">
+</div>
+</a>
+<a href="{% url 'nfsMostWanted' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/16nfs.png' %}" alt="nfs">
+</div>
+</a>
+</div>
+<!--games end-->
+
+<!--fun games-->
+<div class="section_title mb30 mt30 ml20">
+<h3 class="title">
+fun event
+</h3>
+</div>
+<div class="brand_carousel owl-carousel">
+<a href="{% url 'djNight' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/djnight.png' %}" alt="cs-go">
+</div>
+</a>
+<a href="{% url 'theExcelsiorsQuest' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/07quest.png' %}" alt="pubg">
+</div>
+</a>
+<a href="{% url 'myPageantry' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/mypageantry.png' %}" alt="mypageantry">
+</div>
+</a>
+<a href="{% url 'intoTheNextDimension' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/09vr.png' %}" alt="fifa">
+</div>
+</a>
+<a href="{% url 'paintball' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/08paintball.png' %}" alt="cs-go">
+</div>
+</a>
+<a href="{% url 'coolestBike' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/coolestbike.png' %}" alt="cs-go">
+</div>
+</a>
+<a href="{% url 'bikeShow' %}">
+<div class="brand_item text-center">
+<img src="{% static 'apps/img/events/bikeshow.png' %}" alt="cs-go">
+</div>
+</a>
+</div>
+<!--fun games end-->
+
+<!--brands section -->
+<!--<div class="container">
+<br><br><br><br>
+<a href="{% url 'Sponsors' %}">
+<div class="text-center section_title mb50 ml30 mt30" id="partnerborder">
+<h3 class="title">
+<u>view our esteemed partners</u>
+</h3>
+</div>
+</a>-->
+<!--<div class=" mb30">-->
+<div class="section_title mb50 ml30 mt30">
+    <h3 class="title neg-margin">
+        our partners
+    </h3>
+</div>
+<div class="brand_carousel owl-carousel mb30">
+    <div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/hackerearth.png' %}" alt="Hackerearth">
+    </div>
+    <div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/drona.png' %}" alt="Drona Aviation">
+    </div>
+    <div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/dalvik.png' %}" alt="Dalvik Apps">
+    </div>
+    <div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/hydrasociety.png' %}" alt="Society of Hydraulics">
+    </div>
+    <div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/iosd.png' %}" alt="IoSD">
+    </div>
+	<div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/onyomarx.png' %}" alt="Onyomarx">
+    </div>
+	<div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/wecan.png' %}" alt="We Can Education">
+    </div>
+	<div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/souledstore.png' %}" alt="The Souled Store">
+    </div>
+	<div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/skillenza.png' %}" alt="Skillenza">
+    </div>
+	<div class="brand_item text-center">
+        <img src="{% static 'apps/img/sponsor-02/nexus.png' %}" alt="Nexus Sports">
+    </div>
+</div>
+<!--brands section end-->
+
+<!--footer start -->
+<div class="copyright_footer">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6 col-12">
+<p>#Tech 2019, Ajeenkya DY Patil University, Pune</p>
+</div>
+</div>
+</div>
+</div>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="{% static 'apps/js/jquery.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'apps/js/popper.js' %}"></script>
+<script src="{% static 'apps/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'apps/js/waypoints.min.js' %}"></script>
+<!--slick carousel -->
+<script src="{% static 'apps/js/owl.carousel.min.js' %}"></script>
+<!--parallax -->
+<script src="{% static 'apps/js/parallax.min.js' %}"></script>
+<!--Counter up -->
+<script src="{% static 'apps/js/jquery.counterup.min.js' %}"></script>
+<!--Counter down -->
+<script src="{% static 'apps/js/jquery.countdown.min.js' %}"></script>
+<!-- WOW JS -->
+<script src="{% static 'apps/js/wow.min.js' %}"></script>
+<!-- Custom js -->
+<script src="{% static 'apps/js/main.js' %}"></script>
+<script>
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+// On-page links
+if (
+location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+&& 
+location.hostname == this.hostname
+) {
+// Figure out element to scroll to
+var target = $(this.hash);
+target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+// Does a scroll target exist?
+if (target.length) {
+// Only prevent default if animation is actually gonna happen
+event.preventDefault();
+$('html, body').animate({
+scrollTop: target.offset().top
+}, 1000, function() {
+// Callback after animation
+// Must change focus!
+var $target = $(target);
+$target.focus();
+if ($target.is(":focus")) { // Checking if the target was focused
+return false;
+} else {
+$target.focus(); // Set focus again
+};
+});
+}
+}
+})   
+</script>
+</body>
+</html>

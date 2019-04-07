@@ -1,0 +1,383 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ========== Meta Tags ========== -->
+<meta charset="UTF-8">
+<meta name="description" content="HashTech - Venture's Committee">
+<meta name="keywords" content="HashTech - Venture's Committee">
+<meta name="author" content="HashTech">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- ========== Title ========== -->
+<title>#TECH | Student Coordinators</title>
+<!-- ========== Favicon Ico ========== -->
+<link rel="shortcut icon" href="{% static 'apps/img/logo.png' %}">
+<!-- ========== STYLESHEETS ========== -->
+<!-- Bootstrap CSS -->
+<link href="{% static 'apps/css/bootstrap.min.css' %}" rel="stylesheet">
+<!-- Fonts Icon CSS -->
+<link href="{% static 'apps/css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/et-line.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/ionicons.min.css' %}" rel="stylesheet">
+<!-- Carousel CSS -->
+<link href="{% static 'apps/css/owl.carousel.min.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/owl.theme.default.min.css' %}" rel="stylesheet">
+<!-- Animate CSS -->
+<link rel="stylesheet" href="{% static 'apps/css/animate.min.css' %}">
+<!-- Custom styles for this template -->
+<link href="{% static 'apps/css/main.css' %}" rel="stylesheet">
+<link href="{% static 'apps/css/head.css' %}" rel="stylesheet">
+</head>
+<body style="background-color: black;">
+	<div class="loader">
+		<div class="loader-outter"></div>
+		<div class="loader-inner"></div>
+	</div>
+
+	<!--header start here -->
+	<header class="header navbar fixed-top navbar-expand-md">
+		<div class="container">
+			<a class="navbar-brand logo" href="{% url 'homepage' %}">
+				<img src="{% static 'apps/img/logo-dark.png' %}" alt="logo"/>
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="lnr lnr-text-align-right"></span>
+			</button>
+			<div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+				<ul class=" nav navbar-nav menu">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'homepage' %}">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'calendar_page' %}">Schedule</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'Sponsors' %}">Sponsors</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active-now" href="#">Team</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="{% url 'Contact-Us' %}">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<!--header end here-->
+
+<!--speaker section-->
+<div id="head">
+<section class="pb100">
+<div class="container">
+<div class="section_title mb50">
+<h3 class="title">
+<font color ="white">Event Heads</font>
+</h3>
+</div>
+</div>
+<div class="row justify-content-center no-gutters">
+
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/pranshu.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Pranshu Tople</h5>
+<p><u>8983592752</u></p>
+<p class="position">Drone Building Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/tanay.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Tanay Mitkari</h5>
+<p><u>7756080462</u></p>
+<p class="position">Robo Soccer</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/santo.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">G Santosh</h5>
+<p><u>9725989900</u></p>
+<p class="position">Fastest Line Follower Challenge</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/anway.png' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Anway Somani</h5>
+<p><u>9096052940</u></p>
+<p class="position">Hack-a-thon</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/pankaj.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Pankaj Penmetcha</h5>
+<p><u>7013256068</u></p>
+<p class="position">Robo Race</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/etisha.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Etisha Gurav</h5>
+<p><u>9867579546</u></p>
+<p class="position">Pradyo-Geeky</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/pallavi.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Pallavi Saha</h5>
+<p><u>9561372659</u></p>
+<p class="position">Pitch-It-Up</p>
+</div>
+</div>
+</div>
+</div>
+<!--<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Shubham Nandi</h5>
+<p class="position">Hack-a-thon</p>
+</div>
+</div>
+</div>
+</div>-->
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/yatish.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Yatish Kumavat</h5>
+<p><u>9890557335</u></p>
+<p class="position">Into The NEXT DIMENSION</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/tasneem.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Tasneem Khan</h5>
+<p><u>9730738710</u></p>
+<p class="position">The Excelsior's Quest</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/hrishi.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Hrishikesh Naik</h5>
+<p><u>7387399990</u></p>
+<p class="position">Paintball</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/minerva.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Minerva Sarma</h5>
+<p><u>7086012396</u></p>
+<p class="position">Machine Learning Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/dhruvin.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Dhruvin Jasani</h5>
+<p><u>9321371973</u></p>
+<p class="position">PCB Designing Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/hemendra.png' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Hemendra Lelawat</h5>
+<p><u>9730934953</u></p>
+<p class="position">Ethical Hacking Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/sambandh.png' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Sambandh Jain
+<p><u>9669506081</u></p>
+<p class="position">DJ Night</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/priyanka.png' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Priyanka Radhanpura</h5>
+<p><u>8460462708</u></p>
+<p class="position">Ethical Hacking Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/vinit.png' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Vinit Patil</h5>
+<p><u>7588926568</u></p>
+<p class="position">Go-Kart Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/shantanu.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Shantanu Sharma</h5>
+<p class="position">Tall Building Design Analysis Workshop</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<img src="{% static 'apps/img/head/kshitij.JPG' %}" alt="speaker name">
+<div class="info_box">
+<h5 class="name">Kshitij Raje</h5>
+<p><u>7972985417</u></p>
+<p class="position">Gaming Event</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<!--<img src="{% static 'apps/img/head/kshitij.JPG' %}" alt="speaker name">-->
+<div class="info_box">
+<h5 class="name">Shubham Nandi</h5>
+<p><u>9970367853</u></p>
+<p class="position">Hackathon</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-3 col-sm-6" id="pic1">
+<div class="speaker_box">
+<div class="speaker_img">
+<!--<img src="{% static 'apps/img/head/kshitij.JPG' %}" alt="speaker name">-->
+<div class="info_box">
+<h5 class="name">Shivani Radhanpura</h5>
+<p><u>9408844323</u></p>
+<p class="position">PCB Design Workshop</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+</div>
+<!--speaker section end -->
+
+<!--brands section -->
+<div class="container">
+<section class="">
+<div>
+<div class="section_title">
+<h3 class="title">
+<font color ="white">OUR VENTURE SUPPORTERS</font>
+</h3>
+{% for colun in volunteer %}
+	<div style="">{{ colun.name }}</div>
+{% endfor %}
+</div>
+</div>
+
+	<!--footer start -->
+	<div class="copyright_footer">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-12">
+					<p>#Tech 2019, Ajeenkya DY Patil University, Pune</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--footer end -->
+
+<!-- jquery -->
+<script src="{% static 'apps/js/jquery.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'apps/js/popper.js' %}"></script>
+<script src="{% static 'apps/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'apps/js/waypoints.min.js' %}"></script>
+<!--slick carousel -->
+<script src="{% static 'apps/js/owl.carousel.min.js' %}"></script>
+<!--parallax -->
+<script src="{% static 'apps/js/parallax.min.js' %}"></script>
+<!--Counter up -->
+<script src="{% static 'apps/js/jquery.counterup.min.js' %}"></script>
+<!--Counter down -->
+<script src="{% static 'apps/js/jquery.countdown.min.js' %}"></script>
+<!-- WOW JS -->
+<script src="{% static 'apps/js/wow.min.js' %}"></script>
+<!-- Custom js -->
+<script src="{% static 'apps/js/main.js' %}"></script>
+</body>
+</html>

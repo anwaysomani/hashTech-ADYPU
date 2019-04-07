@@ -1,0 +1,125 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="#Tech - Payment">
+    <meta name="keywords" content="#Tech - Payment">
+    <meta name="author" content="#Tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>#TECH</title>
+    <!-- ========== Favicon Ico ========== -->
+   	<link rel="icon" href="fav.ico">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'apps/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="{% static 'apps/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/et-line.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/ionicons.min.css' %}" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="{% static 'apps/css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/owl.theme.default.min.css' %}" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'apps/css/animate.min.css' %}">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'apps/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/head.css' %}" rel="stylesheet">
+</head>
+<body style="background-color: black;">
+<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>
+
+<!--header start here -->
+<header class="header navbar fixed-top navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">
+            <img src="{% static 'apps/img/logo-dark.png' %}" alt="logo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+            <ul class=" nav navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'homepage' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'calendar_page' %}">calender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'Sponsors' %}">Sponsors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'student_coordinator' %}">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'Contact-Us' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--header end here-->
+
+<!--speaker section-->
+<div id="head">
+<section class="pb100">
+    <div class="container">
+        <div class="section_title mb50">
+            <h3 class="title">
+               <font color ="white">Payment</font>
+            </h3>
+        </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+        <div class="col-md-3 col-sm-6" id="pic1">
+            <div class="speaker_box">
+                <h1>Paytm</h1>
+                    <img src="{% static 'apps/img/qr/paytm.png' %}" alt="speaker name">
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6" id="pic1">
+            <div class="speaker_box">
+                <h1>Google Pay</h1>
+                    <img src="{% static 'apps/img/qr/upi.png' %}" alt="speaker name">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!--speaker section end -->
+
+<!--footer start -->
+<div class="copyright_footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+                <p>
+                    HashTech '19, Ajeenkya DY Patil University
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="{% static 'apps/js/jquery.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'apps/js/popper.js' %}"></script>
+<script src="{% static 'apps/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'apps/js/waypoints.min.js' %}"></script>
+<!--parallax -->
+<script src="{% static 'apps/js/parallax.min.js' %}"></script>
+<!-- WOW JS -->
+<script src="{% static 'apps/js/wow.min.js' %}"></script>
+<!-- Custom js -->
+<script src="{% static 'apps/js/main.js' %}"></script>
+</body>
+</html>

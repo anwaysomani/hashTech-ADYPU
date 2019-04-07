@@ -1,0 +1,190 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="#Tech - Contact">
+    <meta name="keywords" content="#Tech - Contact">
+    <meta name="author" content="#Tech">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- ========== Title ========== -->
+    <title>#Tech - Contact</title>
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="{% static 'apps/img/bg/logo.ico' %}">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'apps/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Fonts Icon CSS -->
+    <link href="{% static 'apps/css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/et-line.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/ionicons.min.css' %}" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link href="{% static 'apps/css/owl.carousel.min.css' %}" rel="stylesheet">
+    <link href="{% static 'apps/css/owl.theme.default.min.css' %}" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static 'apps/css/animate.min.css' %}">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'apps/css/main.css' %}" rel="stylesheet">
+</head>
+<body>
+<!--<div class="loader">
+    <div class="loader-outter"></div>
+    <div class="loader-inner"></div>
+</div>-->
+
+<!--header start here -->
+<header class="header navbar fixed-top navbar-expand-md">
+    <div class="container">
+        <a class="navbar-brand logo" href="#">
+            <img src="{% static 'apps/img/logo-dark.png' %}" alt="#Tech"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="lnr lnr-text-align-right"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+            <ul class=" nav navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'homepage' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'calendar_page' %}">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'Sponsors' %}">Sponsors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'student_coordinator' %}">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="{% url 'Contact-Us' %}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!--header end here-->
+
+<!--page title section-->
+<section class="inner_cover parallax-window" data-parallax="scroll" data-image-src="assets/img/bg/bg-img.png">
+    <div class="overlay_dark"></div>
+    <div class="container">
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="#">Home</a>  | </li>
+                <li><span>Contact</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--page title section end-->
+
+
+<!--contact section -->
+<section class="pt100 pb100">
+    <div class="container" style="color: black'">
+        <div class="row justify-content-center mt100">
+            <div class="col-md-6 col-12">
+                <div class="contact_info">
+                    <h5 style="color: black;">
+                        #Tech at your service....<i class="fas fa-toolbox"></i>
+                    </h5>
+                    <p style="background-color: black">
+                    	#Tech 2019 is available at your service 24*7.<br>
+						<!--<b>Event Details:</b>-->
+
+					</p>
+                    <ul class="social_list">
+                        <li>
+                            <a href="www.instagram.com/hashtech_2k19"><i class="ion-social-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="www.facebook.com/hashtech2k19"><i class="ion-social-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="www.twitter.com/hashtech2k19"><i class="ion-social-twitter"></i></a>
+                        </li>
+                    </ul>
+					<br>
+                    <ul class="icon_list pt50">
+                        <li>
+                            <i class="ion-location"></i>
+                            <span>
+                                Ajeenkya Dy Patil University,<br/>
+                                Lohegaon,Pune
+                            </span>
+                        </li>
+                        <li>
+                            <i class="ion-ios-telephone"></i>
+                            <span>
+                                +91-8686868686 
+                                </span>
+                        </li>
+                        <li>
+                            <i class="ion-email-unread"></i>
+                            <span>
+                                acet@adypu.edu.in
+                                </span>
+                        </li>
+
+                        <li>
+                            <i class="ion-planet"></i>
+                            <span>
+                                www.adypu.edu.in
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 mt70">
+                <!--map -->
+                <div id="map" data-lon="73.911254" data-lat="18.622900" class="map"></div>
+                <!--map end-->
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--contact section end -->
+
+<!--footer start -->
+<footer>
+    <div class="container">
+        <div class="row justify-content-center">
+		</div>
+    </div>
+</footer>
+<div class="copyright_footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+				<p>#Tech Ajeenkya DY Patil University</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer end -->
+
+<!-- jquery -->
+<script src="{% static 'apps/js/jquery.min.js' %}"></script>
+<!-- bootstrap -->
+<script src="{% static 'apps/js/popper.js' %}"></script>
+<script src="{% static 'apps/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'apps/js/waypoints.min.js' %}"></script>
+<!--slick carousel -->
+<script src="{% static 'apps/js/owl.carousel.min.js' %}"></script>
+<!--parallax -->
+<script src="{% static 'apps/js/parallax.min.js' %}"></script>
+<!--Counter up -->
+<script src="{% static 'apps/js/jquery.counterup.min.js' %}"></script>
+<!--Counter down -->
+<script src="{% static 'apps/js/jquery.countdown.min.js' %}"></script>
+<!-- WOW JS -->
+<script src="{% static 'apps/js/wow.min.js' %}"></script>
+<!--map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuahgsm_qfH1F3iywCKzZNMdgsCfnjuUA"></script>
+<!-- Custom js -->
+<script src="{% static 'apps/js/main.js' %}"></script>
+</body>
+</html>
